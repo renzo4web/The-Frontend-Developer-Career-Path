@@ -1,0 +1,75 @@
+:root {
+    --wooden: url(https://scrimba.ams3.digitaloceanspaces.com/assets/courses/gdegree/Horror/wooden.jpg);
+    --forest: url(https://scrimba.ams3.digitaloceanspaces.com/assets/courses/gdegree/Horror/forest.jpg);
+    --sweets: url(https://scrimba.ams3.digitaloceanspaces.com/assets/courses/gdegree/Cute/sweets1.jpg);
+    --bubbles: url(https://scrimba.ams3.digitaloceanspaces.com/assets/courses/gdegree/Cute/bubbles.jpg);
+    --crackle: url(https://scrimba.ams3.digitaloceanspaces.com/assets/courses/gdegree/Minimalist/crackle.jpg);
+    --sparkle: url(https://scrimba.ams3.digitaloceanspaces.com/assets/courses/gdegree/Minimalist/sparkle.jpg);
+    --rainbow: url(https://scrimba.ams3.digitaloceanspaces.com/assets/courses/gdegree/Rainbow/rainbow-paint.jpg);
+    --smoke: url(https://scrimba.ams3.digitaloceanspaces.com/assets/courses/gdegree/Rainbow/rainbow-smoke.jpg);
+    --nightsky: url(https://scrimba.ams3.digitaloceanspaces.com/assets/courses/gdegree/Sleek/nightsky.jpg);
+    --sunset: url(https://scrimba.ams3.digitaloceanspaces.com/assets/courses/gdegree/Sleek/sunset.jpg);
+
+    
+    /* COLORS */
+    --blood: #8a0303;
+    --slime: #228B22;
+    --gloom: #2B363B;
+    --candy: #ee698e;
+    --purple: #7B1E7A;
+    --blue: #2176AE;
+    --olive: #A6C48A;    
+    --royal: #0A1045;
+    --lilac: #B8AED6;
+    --snow: #f4f9e9;
+    
+    /* FONTS */
+    --scary-font: 'Metal Mania';
+    --typewriter-font: 'Inconsolata';
+    --funny-font: 'Balsamiq Sans';
+    --curly-font: 'Pacifico';
+    --old-style-font: 'Cinzel';
+    --simple-font: 'Noto Sans HK';
+    --funky-font: 'MuseoModerno';
+    --sweet-font: 'Lobster';
+}
+
+
+body {
+    /*
+    CHALLENGE: change the background to one you like
+    */
+    --background-image: var(--nightsky);
+    
+    /*
+    CHALLENGE: change the main color to one you like!
+    */
+    --main-color: var(--blue);
+    
+     /* 
+    CHALLENGE: change the font to one you think is cool
+    */
+    font-family: var(--simple-font);
+}
+
+
+.grid {
+    /* 
+    BONUS CHALLENGE: adjust how many columns you'd like to have
+    */
+   column-count: 3;
+   column-gap: 10px;
+}
+
+
+.img {
+    /* 
+    BONUS CHALLENGE: uncomment the code below, 
+    and choose your favourite border
+    */
+    
+    /* 
+    border-image: var(--sweets) 100;
+    */
+}
+
