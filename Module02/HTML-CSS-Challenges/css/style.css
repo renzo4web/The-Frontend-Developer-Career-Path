@@ -12,6 +12,9 @@ header h1 {
   text-align: center;
 }
 
+.white-text {
+  color: #fff;
+}
 .subheading {
   background-color: #281b2d;
   font-size: 48px;
