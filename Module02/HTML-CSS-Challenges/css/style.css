@@ -28,3 +28,20 @@ header h1 {
   max-width: 1000px;
   padding: 0 20px;
 }
+
+.columns {
+  display: flex;
+}
+
+.main-content {
+  width: 65%;
+  margin-right: 5%;
+}
+
+.sidebar {
+  width: 30%;
+}
+
+.col-right {
+  margin: 0 15px;
+}
