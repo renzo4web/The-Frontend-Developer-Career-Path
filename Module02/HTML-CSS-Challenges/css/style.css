@@ -1,6 +1,12 @@
 body {
   margin: 0;
+  font-family: sans-serif;
 }
-h1 {
-  color: red;
+header h1 {
+  font-size: 72px;
+  padding: 25px 0;
+  margin-top: 0;
+  background-color: #281b2d;
+  color: #fff;
+  text-align: center;
 }
