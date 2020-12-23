@@ -39,12 +39,15 @@ header h1 {
   width: 70%;
   margin-top: 0;
   margin-right: 5%;
+  box-shadow: -3px 7px 25px 0px rgba(0, 0, 0, 0.75);
+  padding: 20px;
 }
 
 .sidebar {
   width: 30%;
   background: #9ae84f;
   padding: 20px;
+  box-shadow: -3px 7px 25px 0px rgba(0, 0, 0, 0.75);
 }
 .sidebar ol {
   list-style-position: inside;
@@ -70,4 +73,11 @@ header h1 {
 
 a:hover {
   color: rgb(0, 255, 221);
+}
+
+footer {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 20px;
 }
