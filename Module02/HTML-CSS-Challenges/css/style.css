@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: sans-serif;
 }
+
 header h1 {
   font-size: 72px;
   padding: 25px 0;
@@ -9,4 +10,12 @@ header h1 {
   background-color: #281b2d;
   color: #fff;
   text-align: center;
+}
+
+.subheading {
+  background-color: #281b2d;
+  font-size: 48px;
+  color: #fcd801;
+  padding: 20px;
+  border-bottom: solid 7px #00c54c;
 }
