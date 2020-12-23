@@ -22,3 +22,9 @@ header h1 {
   padding: 20px;
   border-bottom: solid 7px #00c54c;
 }
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 20px;
+}
