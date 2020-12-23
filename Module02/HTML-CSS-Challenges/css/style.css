@@ -20,6 +20,7 @@ header h1 {
   font-size: 48px;
   color: #fcd801;
   padding: 20px;
+  margin-top: 0;
   border-bottom: solid 7px #00c54c;
 }
 
@@ -31,17 +32,42 @@ header h1 {
 
 .columns {
   display: flex;
+  margin-bottom: 60px;
 }
 
 .main-content {
-  width: 65%;
+  width: 70%;
+  margin-top: 0;
   margin-right: 5%;
 }
 
 .sidebar {
   width: 30%;
+  background: #9ae84f;
+  padding: 20px;
+}
+.sidebar ol {
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+
+.source {
+  font-size: 20px;
+}
+
+.sidebar li {
+  padding: 10px 0;
 }
 
 .col-right {
   margin: 0 15px;
+}
+
+.red-text {
+  color: red;
+}
+
+a:hover {
+  color: rgb(0, 255, 221);
 }
