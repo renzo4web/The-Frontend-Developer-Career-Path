@@ -1,0 +1,66 @@
+/*
+h1 - 48px
+h2 - 36px
+h3 - 28px
+all other text - 21px
+
+colors: 
+   #588C94 
+   #1D3C41
+*/
+
+/* Global styles  */
+
+body {
+    margin: 0;
+    /* this font size will effect all elements (other than h1 -> h6) on the page */
+    font-size: 21px;
+}
+
+/* ========
+Typography 
+======== */
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+/* ========
+Layout 
+======== */
+
+header {
+    background-color: #588C94;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.intro {
+    width: 100%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.my-skills {
+    background-color: #1D3C41;
+    color: #fff;
+    padding: 75px 0;
+    text-align: center;
+}
+
+.columns {
+    display: flex;
+}
+
+.column {
+    margin: 0 10px;
+}
