@@ -7,12 +7,13 @@ const btnUnshift = document.getElementById('unshift');
 const btnPush = document.getElementById('push');
 const btnPop = document.getElementById('pop');
 
-function getEmojis() {
-  emojiArray = Array.from(inputEmojis.value);
-  console.log(emojiArray);
+
+
+
+function resetInputValue(){
+  inputEmojis.value = '';
 }
 
-//inputEmojis.addEventListener('input', getEmojis);
 
 
 
@@ -20,18 +21,15 @@ function getEmojis() {
 
 //Display Emojis
 function displayEmojis() {
-  let emojis = [];
+
   emojiContainer.innerHTML = '';
+
   for (let index = 0; index < emojiArray.length; index++) {
     let emojiSpan = document.createElement('span');
     emojiSpan.textContent = emojiArray[index];
-    emojis.push(emojiSpan);
+    emojiContainer.append(emojiSpan)
   }
 
-  console.log(emojis);
-  emojis.forEach((element) => {
-    emojiContainer.append(element);
-  });
 }
 
 //🥺🥳😅🥺🥺✨
@@ -51,13 +49,13 @@ btnShift.addEventListener('click', () => {
 //Add to array Listeners
 btnUnshift.addEventListener('click', () => {
   emojiArray.unshift(inputEmojis.value);
-  inputEmojis.value = '';
+  resetInputValue()
   displayEmojis();
 });
 
 
 btnPush.addEventListener('click', () => {
   emojiArray.push(inputEmojis.value);
-  inputEmojis.value = '';
+  resetInputValue()
   displayEmojis();
 });

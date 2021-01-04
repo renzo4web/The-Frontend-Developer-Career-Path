@@ -1,12 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap');
+
+*{
+    font-family: 'Cabin', sans-serif;
+}
+
 html {
     height: 100vh;
-    font-family: Baloo;
+    font-family: 'Cabin', sans-serif;
     letter-spacing: 2px;
 }
 body {
     margin: 10px;
     padding: 10px;
-    background-image: linear-gradient(#5DA4D9, #FFF);
+    background-image:  #FFF;
 }
 
 #emojiContainer {
@@ -21,6 +27,7 @@ body {
 
 #push,#unshift {
     background-color: #80D87F;
+    
 }
 
 #shift,#pop {
@@ -29,25 +36,25 @@ body {
 
 h1 {
     text-align: center;
-    color: white;
+    color: #000
 }
 
 input {
     margin: 0 auto;
     display: block;
-    border: none;
+    border: solid black 2px;
     height: 30px;
     background: white;
-    border-radius: 8px;
+    border-radius: 2px;
     text-align: center;
 }
 
 button {
-    font-family: Baloo;
     letter-spacing: px;
     background: darkcyan;
     color: white;
     border: none;
+    box-shadow: -3px 5px #33332d;
     padding: 4px 10px;
     border-radius: 4px;
     margin: 0 5px;
