@@ -44,30 +44,50 @@ body{
 
 
 #entries{
-
+    width: 20em;
+    margin-top: 1em;
     color: #ede7e3;
     border-radius: 25px;
     padding: 2em;
-    background-color: #6083ff;
+    border: solid 1px #6083ff;
 }
-/*
-#entries .single-entry{
-    
-    border-radius: 25px;
-    padding: 1.5em;
-    margin-top: 1em;
-    max-width: 20em;
-    position: relative;
-}*/
 
-.single-entry .display-entry-button{
+
+
+
+#entries .single-entry {
+    border-radius: 20px;
+}
+
+
+
+#entries .single-entry p{
+    max-width: 200px;
+    word-wrap: break-word;
+    border-radius: 25px;
+    padding: 1em;
+    margin: 0.5em;
+    margin-top: 1em;
+    font-size: 1.3em;
+}
+#entries .single-entry time{
+    font-style: italic;
+    padding: 1em 2em;
+
+}
+
+.display-entry-button{
     display: inline-block;
     border: 5%;
-    margin: 1em;
+    margin: 0.2em;
+    margin-bottom: 1em;
     padding: 0.5em;
     width: auto;
 }
-
+ .display-entry-button:hover{
+    cursor: pointer;
+    background-color: crimson;
+}
 .hidden{
     display: none;
 }

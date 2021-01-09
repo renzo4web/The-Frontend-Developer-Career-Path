@@ -57,8 +57,14 @@ function showEntry(btn) {
 
 function createEntry(text,  date) {
   const entryDiv = document.createElement('div');
+  const time = document.createElement('time');
+  const p = document.createElement('p');
   entryDiv.classList.add('single-entry');
-  entryDiv.textContent = `${text} created:${date}`;
+  p.textContent = text;
+  time.textContent = date;
+  entryDiv.insertAdjacentElement('afterbegin', time);
+  entryDiv.insertAdjacentElement('afterbegin', p);
+
   entryDiv.style.backgroundColor = randomColor();
   return entryDiv;;
 }
