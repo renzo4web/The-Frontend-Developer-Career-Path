@@ -2,35 +2,81 @@ const form = document.getElementById('entryForm');
 const submit = document.querySelector('.button');
 const entriesSection = document.getElementById('entries');
 const textBox = document.querySelector('.entry-textbox');
+const navBtns = document.querySelector('.entries-nav');
+const entriesShow = document.querySelector('.entries-show');
 const clear = '';
+let count = 1;
+let entries = [];
+
+
+function createObjEntry(input, time) {
+  let putEntry = {
+    text: input,
+    time: time,
+  };
+  entries.push(putEntry);
+}
 
 form.addEventListener('submit', addEntryToDom);
 
 function addEntryToDom(event) {
   event.preventDefault();
   const textFromForm = textBox.value;
-  createEntry(textFromForm);
+  createObjEntry(textFromForm, createdOn());
+  navBtns.appendChild(createEntryBtn());
+  btnListeners(document.querySelectorAll('.display-entry-button'));
+  ifText(textFromForm);
   textBox.value = clear;
 }
 
 const createEntryBtn = () => {
   const btnEntry = document.createElement('button');
   btnEntry.classList.add('display-entry-button');
-  const icon = document.createElement('li');
-  icon.classList.add('far');
-  icon.classList.add('fa-trash-alt');
-  btnEntry.appendChild(icon);
+  btnEntry.textContent = count;
   return btnEntry;
 };
 
-function createEntry(text) {
+
+function btnListeners(node) {
+  btnEntries = node;
+  btnEntries.forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+      entriesShow.textContent = '';
+      showEntry(event);
+    });
+  });
+}
+function showEntry(btn) {
+  let targetIndex = parseInt(btn.currentTarget.textContent);
+  console.log(targetIndex);
+  let text = entries[targetIndex - 1].text;
+  let date = entries[targetIndex - 1].time;
+  let showEntry = createEntry(text, date);
+  entriesShow.insertAdjacentElement('afterbegin', showEntry);
+}
+
+function createEntry(text,  date) {
   const entryDiv = document.createElement('div');
   entryDiv.classList.add('single-entry');
-  entryDiv.textContent = text;
+  entryDiv.textContent = `${text} created:${date}`;
   entryDiv.style.backgroundColor = randomColor();
-  entryDiv.appendChild(createEntryBtn());
-  entriesSection.insertAdjacentElement('afterbegin', entryDiv);
+  return entryDiv;;
 }
+
+function ifText(text) {
+  text !== '' ? count++ : count;
+}
+
+function createdOn() {
+  let today = new Date();
+  let date = `${today.getDate()}-${
+    today.getMonth() + 1
+  }-${today.getFullYear()}`;
+  let hrs = `${today.getHours()}:${today.getMinutes()} `;
+  return `${date} ${hrs}`;
+}
+
+
 
 function randomColor() {
   let colors = [];
