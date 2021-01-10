@@ -5,8 +5,18 @@ const textBox = document.querySelector('.entry-textbox');
 const navBtns = document.querySelector('.entries-nav');
 const entriesShow = document.querySelector('.entries-show');
 const clear = '';
-let count = 1;
-let entries = [];
+
+// TODO Fix btn count when is submited
+let countBtn = 0;
+let entries = JSON.parse(localStorage.getItem('localEntry'));
+localStorage.setItem('localEntry', JSON.stringify(entries));
+
+if (entries.length > 0) {
+  countBtn = entries.length + 1;
+  entries = JSON.parse(localStorage.getItem('localEntry'));
+}
+
+
 
 
 function createObjEntry(input, time) {
@@ -15,6 +25,7 @@ function createObjEntry(input, time) {
     time: time,
   };
   entries.push(putEntry);
+  localStorage.setItem('localEntry', JSON.stringify(entries));
 }
 
 form.addEventListener('submit', addEntryToDom);
@@ -23,16 +34,17 @@ function addEntryToDom(event) {
   event.preventDefault();
   const textFromForm = textBox.value;
   createObjEntry(textFromForm, createdOn());
-  navBtns.appendChild(createEntryBtn());
+  countBtn++;
+  navBtns.appendChild(createEntryBtn(countBtn));
   btnListeners(document.querySelectorAll('.display-entry-button'));
   ifText(textFromForm);
   textBox.value = clear;
 }
 
-const createEntryBtn = () => {
+const createEntryBtn = (countBtn) => {
   const btnEntry = document.createElement('button');
   btnEntry.classList.add('display-entry-button');
-  btnEntry.textContent = count;
+  btnEntry.textContent = countBtn;
   return btnEntry;
 };
 
@@ -46,14 +58,29 @@ function btnListeners(node) {
     });
   });
 }
+
+displaySavedEntry();
+
+function displaySavedEntry() {
+  if (entries.length > 0) {
+    for (let index = 0; index < countBtn; index++) {
+      navBtns.appendChild(createEntryBtn(index + 1));
+      btnListeners(document.querySelectorAll('.display-entry-button'));
+    }
+  }
+}
+
+
 function showEntry(btn) {
-  let targetIndex = parseInt(btn.currentTarget.textContent);
-  console.log(targetIndex);
-  let text = entries[targetIndex - 1].text;
-  let date = entries[targetIndex - 1].time;
+  let targetIndex = parseInt(btn.currentTarget.textContent) - 1;
+  let entriesSaved = JSON.parse(localStorage.getItem('localEntry'));
+  let text = entriesSaved[targetIndex].text;
+  let date = entriesSaved[targetIndex].time;
   let showEntry = createEntry(text, date);
   entriesShow.insertAdjacentElement('afterbegin', showEntry);
 }
+
+
 
 function createEntry(text,  date) {
   const entryDiv = document.createElement('div');
@@ -70,7 +97,7 @@ function createEntry(text,  date) {
 }
 
 function ifText(text) {
-  text !== '' ? count++ : count;
+  text !== '' ? countBtn++ : countBtn;
 }
 
 function createdOn() {
