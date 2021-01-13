@@ -1,0 +1,47 @@
+/* ==========================
+	Write your solution here!
+   ========================== */
+
+* {
+  font-family: Montserrat;
+}
+.card {
+  margin: 2% auto;
+  width: 1000px;
+  background-color: #A5E686;
+  text-align: center;
+  padding: 3%;
+}
+.smile-face {
+  width: 100px;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 0;
+  animation: spin 5s linear infinite;
+  animation-play-state: paused; 
+}
+.smile-face:hover{
+   cursor: pointer;
+   animation-play-state: running;
+}
+
+
+.title {
+  margin-top: 0;
+}
+
+.info {
+  margin-top: 30px;
+}
+.info-label {
+  font-weight: 800;
+}
+
+.end {
+  margin-top: 30px;
+  font-weight: 800;
+}
+
+@keyframes spin {
+   100% {transform: rotate(1turn); }
+ }
