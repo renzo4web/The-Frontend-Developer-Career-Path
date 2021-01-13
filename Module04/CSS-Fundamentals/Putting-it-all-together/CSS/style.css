@@ -1,81 +1,90 @@
-*{
-    font-family: 'Lato', sans-serif;;
+* {
+  font-family: 'Lato', sans-serif;
 }
-
-body{
+html { overflow-y:scroll;  }
+body {
     font-size: 18px;
     background-color: #2d728f;
     font-weight: 400;
-}
-
-h1{
-    font-size: 36px;
     margin-bottom: 0;
-    margin-top: 0;
-    color: #daff7d;
 }
 
-a{
-    color: orange;
-}
-a:hover,a:focus{
-    color: red;
-}
-
-.btn{
-    display: inline-block;
-    padding: 15px 30px ;
-    margin-right: 2%;
-    margin-top: 2%;
-    border-radius: 5px;
-    text-decoration: none;
+h1 {
+  font-size: 36px;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #daff7d;
 }
 
-h2{
-    font-size: 24px;
-    margin-top: 0;
-    color:orange;
+a {
+  color: orange;
 }
-figure{
-    margin: 0 auto;
-    
-}
-img{
-    box-shadow: #000 2px 1px 10px;
-}
-figcaption{
-    margin-top: 2%;
+a:hover,
+a:focus {
+  color: red;
 }
 
-header{
-    margin: 0 auto;
-    width: 620px;
-    padding: 2%;
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  margin-right: 2%;
+  margin-top: 2%;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
-.container{
-    width: 620px;
-    margin: 0 auto;
-   
+h2 {
+  font-size: 24px;
+  margin-top: 0;
+  color: orange;
+}
+figure {
+  margin: 0 auto;
+}
+img {
+  box-shadow: #000 2px 1px 10px;
+}
+figcaption {
+  margin-top: 2%;
 }
 
-.section{
-    padding: 2% 0;
-}
-.section-white{
-    background-color: #fff;
+/* Layout */
+
+
+
+header {
+  margin: 0 auto;
+  width: 620px;
+  padding: 3%;
 }
 
-.section-two{
-    color: #fff;
+.container {
+  width: 620px;
+  margin: 0 auto;
 }
 
-.btn-orange, .btn-white:hover ,.btn-white:focus{
-    color: #fff;
-    background-color: orangered;
+.section {
+  padding: 3% 0;
+}
+.section-white {
+  background-color: #fff;
 }
 
-.btn-white,.btn-orange:hover , .btn-orange:focus{
-    color: #000;
-    background-color: #fff;
+.section-two {
+  color: #fff;
+  margin-bottom: 0px
+}
+
+.btn-orange,
+.btn-white:hover,
+.btn-white:focus {
+  color: #fff;
+  background-color: orangered;
+}
+
+.btn-white,
+.btn-orange:hover,
+.btn-orange:focus {
+  color: #000;
+  background-color: #fff;
 }
