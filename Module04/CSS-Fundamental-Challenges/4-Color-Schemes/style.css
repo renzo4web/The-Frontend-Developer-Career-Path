@@ -1,0 +1,51 @@
+/* DON'T TOUCH THIS! */
+body {
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	height: 100vh;
+	width: 100vw;
+}
+
+.square {
+	padding: 30px;
+	border: 1px solid black;
+	background: #FFE600;
+}
+
+.square-1 {
+	grid-row: 1 / span 1;
+	grid-column: 1 / span 1;
+    background-color: #c74e48;
+    color: #beffb0;
+}
+
+.square-2 {
+	grid-row: 1 / span 1;
+	grid-column: 2 / span 1;
+    background-color: #6cb344;
+    color: #ffd9d1;
+}
+
+.square-3 {
+	grid-row: 2 / span 1;
+	grid-column: 1 / span 1;
+    background-color: #b8eaff;
+    color: #472a00;
+}
+
+.square-4 {
+	grid-row: 2 / span 1;
+	grid-column: 2 / span 1;
+    background-color:#af63db;
+    color:#fffbc2; 
+}
+
+/* DON'T TOUCH THIS! */
+
+/* ==========================
+	Write your solution here!
+   ========================== */
