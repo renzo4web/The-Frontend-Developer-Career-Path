@@ -1,0 +1,22 @@
+/* DON'T TOUCH THIS! */
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 40px;
+}
+/* DON'T TOUCH THIS! */
+
+/* ==========================
+	Write your solution here!
+   ========================== */
+
+.text #text-main {
+	color: #6ec439;
+}
+
+#text-main {
+	color: #d94b41;
+}
