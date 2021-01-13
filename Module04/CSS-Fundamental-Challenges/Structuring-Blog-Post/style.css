@@ -1,0 +1,45 @@
+/* ==========================
+   Write your solution here!
+   
+   ========================== */
+* {
+  font-family: Lato;
+}
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 400px;
+  height: auto;
+}
+
+.main {
+  width: 1800px;
+  margin: 0 auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.title {
+  margin-bottom: 0;
+}
+
+.meta .author,
+.meta .date {
+  font-weight: 900;
+  color: #ef5839;
+}
+
+.post{
+   width: 1000px;
+   line-height: 1.7;
+   font-weight: 400;
+}
+
+.post p{
+   font-size: 18px;
+   margin-top: 50px;
+}
