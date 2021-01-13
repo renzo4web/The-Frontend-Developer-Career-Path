@@ -1,0 +1,69 @@
+/* DON'T TOUCH THIS! */
+body {
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+}
+html,body {
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 36px;
+	width: 100%;
+	text-transform: uppercase;
+	background: #2e354f;
+	margin: 0;
+	color: white;
+}
+
+
+.section-title {
+	text-transform: uppercase;
+}
+
+.underlined {
+	color: #ef5839;
+}
+
+.btn {
+	text-decoration: none;
+	color: white;
+	font-weight: 900;
+	background: #ef5839;
+	display: inline-block;
+    padding: 15px 30px;
+}
+
+.btn:hover {
+	color: #2e354f;
+	background: #d4b44c;
+}
+/* DON'T TOUCH THIS! */
+
+/* ==========================
+	Write your solution here!
+   ========================== */
+   h2{
+       margin-top: 0;
+   }
+   
+   .container{
+       text-align: center;
+       margin: 60px 170px 0px 170px;
+   }
+   
+   .title-section{
+       margin: 0;
+       text-align: center;
+      
+   }
+   .title-text{
+       padding: 10px 0%
+   }
+   
+   .section-title{
+	   padding-bottom: 0.5%;
+       border-bottom: 2px solid #ccc;
+   }
