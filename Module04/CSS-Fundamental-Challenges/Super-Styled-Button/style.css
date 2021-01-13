@@ -1,0 +1,34 @@
+/* DON'T TOUCH THIS! */
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* DON'T TOUCH THIS! */
+
+/* ==========================
+	Write your solution here!
+	Main button background: #ef5839 - Hovered button background: #d4b44c - Hovered button text color: #2e354f
+   ========================== */
+
+.btn {
+  font-family: Lato;
+  font-weight: 900;
+  font-size: 20px;
+  background-color: #ef5839;
+  padding: 20px 30px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #d4b44c;
+  color: #2e354f;
+  font-size: 30px;
+  outline: none;
+}
