@@ -1,0 +1,22 @@
+/* ==========================
+	Write your solution here!
+   ========================== */
+
+img{
+   width: 250px;
+   height: 250px;
+   margin: 0.5%;
+   box-shadow: #000 1px 2px 10px;
+}
+
+.row{
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.container{
+   padding: 0;
+   margin: 0;
+   margin-top: 15%;
+}
