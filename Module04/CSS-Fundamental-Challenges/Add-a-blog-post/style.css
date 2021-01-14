@@ -1,0 +1,52 @@
+/* DON'T TOUCH THIS! */
+body {
+	font-family: 'Lato', sans-serif;
+}
+.post {
+	width: 700px;
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas:
+	"image title"
+	"image desc";
+	grid-gap: 10px;
+	background: #e8f7ff;
+	border: 20px solid #969696;
+	padding: 20px;
+	margin: 0;
+}
+
+img {
+	grid-area: image;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: top;
+}
+
+.title {
+	grid-area: title;
+	margin: 5px;
+	color: #41b1f2;
+	text-transform: uppercase;
+}
+
+.desc {
+	margin: 5px;
+	grid-area: desc;
+}
+/* DON'T TOUCH THIS! */
+
+/* ==========================
+	Write your solution here!
+   ========================== */
+   
+   .post-down{
+	   margin-top: 20px;
+	   background-color: #edbc6d;
+	   color: purple;
+   }
+   .title-purple{
+	   color: purple;
+   }
