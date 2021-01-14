@@ -1,0 +1,29 @@
+/* DON'T TOUCH THIS! */
+body {
+	background: #616161;
+}
+.text {
+	width: 200px;
+	margin: 20% auto;
+	padding: 30px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	text-align: center;
+	background: #2e354f;
+	color: white;
+}
+/* DON'T TOUCH THIS! */
+
+/* ==========================
+	Write your solution here!
+   ========================== */
+   
+   .text:hover{
+	   font-family: Lato;
+	   font-size: 40px;
+	   font-weight: 900;
+	   color: #2e354f;
+	   background-color: #FFF;
+	   width: 300px;
+	   padding: 5%;
+   }
