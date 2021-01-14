@@ -1,0 +1,81 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+/** we need to style our open and close buttons, re-use the comma , to target both buttons **/
+
+/** modal -> remember we used an ID for this div? we can target it by doing #modal **/
+
+/** overlay -> we also used an ID for this, so do the same as above **/
+/** the overlay must overtake the screen, so how would you make the overlay 100% height and 100% width so it fills the entire screen? it also must position itself above everything else!
+
+/* 
+========= Things to note ========= 
+  1) remember on the presentation we want to briefly hide the background of the modal overlay? hint: look at the notes below! rgba...
+  2)
+*/
+
+/*
+======== Helpers
+  - rgba = red, green blue, alpha (alpha being the opacity on a scale of 0 to 1 - 0.5 sounds good?)
+  - rgba is complex and it's a bit of a time sink to remember all the values, look at rgba colour values online, or rgba colour convetors, or even colour palettes!
+  - if you come from a design background, you'll know you can convert HEX values (e.g. #ffffff to rgba using a convertor)
+*/
+
+
+.btn{
+  background-color: orange;
+  border: none;
+  outline: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.btn:hover , .btn:focus{
+  background-color: rgb(54, 124, 255);
+  color: #fff;
+  border: solid 1px orange;
+}
+
+
+
+h1{
+  margin-top: 80px;
+}
+
+.overlay{
+  display: none;
+  margin: 0;
+  top: 0;
+  position: absolute;
+ z-index: 1;
+  height: 100%;
+  width: 100%;
+ background-color:  rgba(185, 185, 185, 0.8);
+}
+
+
+h2{
+  margin-top: 0;
+  font-size: 30px;
+}
+
+#modal{
+  display: none;
+position: absolute;
+margin: 100px auto;
+padding: 2.5%;
+box-shadow: #000 3px 3px 10px;
+background-color: #fff;
+top: 150px;
+right: 35%;
+left: 35%; 
+}
