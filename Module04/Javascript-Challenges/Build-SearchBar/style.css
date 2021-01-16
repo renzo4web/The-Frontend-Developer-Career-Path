@@ -50,3 +50,22 @@ box-shadow: rgb(204, 204, 204) 1px 2px 10px;
     text-align: center;
     background-color: #eff7e1;
 }
+
+.non-selected{
+    opacity: 0.3;
+}
+
+.selected{
+    z-index: 1;
+    background-color: dodgerblue;
+}
+
+footer{
+    font-size: 20px;
+    background-color: #dab849;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    padding: 1% 0;
+    text-align: center;
+}
