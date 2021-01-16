@@ -1,7 +1,10 @@
 body{
     background-color: #fff;
 }
-
+h1{
+    margin-top: 0;
+    margin-bottom: 0;
+}
 
 .btn{
     border: none;
