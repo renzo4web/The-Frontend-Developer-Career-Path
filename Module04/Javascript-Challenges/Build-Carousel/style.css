@@ -1,0 +1,81 @@
+body{
+    background-color: #fff;
+}
+
+
+.btn{
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: rgb(179, 179, 179) 5px 5px 10px;
+
+}
+
+.btn:hover ,.btn:focus{
+    background-color: rgb(255, 255, 255);
+    outline: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+.carousel{
+    margin: 25% auto;
+    position: relative;
+    max-width: 600px;
+    max-height: 300px;
+    box-shadow: rgb(179, 179, 179) 5px 5px 10px;
+
+}
+
+.carousel-item{
+    display:none;
+    max-width: 600px;
+}
+
+.carousel-item-visible{
+    display: block;
+    animation: fade 250ms ;
+
+}
+
+.carousel .carousel-actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel .carousel-actions btn {
+    border-radius: 50px;
+    background-color: white;
+    border: 0;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.carousel .carousel-actions button#carousel-button-prev {
+    margin-left: 20px;
+}
+
+.carousel .carousel-actions button#carousel-button-next {
+    margin-right: 20px;   
+}
+
+
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
