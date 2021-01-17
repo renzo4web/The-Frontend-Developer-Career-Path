@@ -12,7 +12,6 @@ const slide = {
     titleElement = document.getElementById('titleMovie');
     titleElement.textContent = '';
     titleElement.textContent = titles[index];
-    carousel.insertAdjacentElement('beforebegin', titleElement);
   },
   pageNumber: function count(num) {
     return (count = num);

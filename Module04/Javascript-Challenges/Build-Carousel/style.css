@@ -1,9 +1,10 @@
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
 body{
     background-color: #fff;
-}
-h1{
-    margin-top: 0;
-    margin-bottom: 0;
+    position: relative;
 }
 
 .btn{
@@ -12,7 +13,7 @@ h1{
     height: 40px;
     border-radius: 50%;
     box-shadow: rgb(179, 179, 179) 5px 5px 10px;
-
+    
 }
 
 .btn:hover ,.btn:focus{
@@ -24,13 +25,19 @@ img{
     max-width: 100%;
 }
 
+#titleMovie{
+    margin: 0;
+    text-align: center;
+  
+}
 .carousel{
-    margin: 25% auto;
-    position: relative;
+    margin: 0 auto;
+    position: absolute;
+    left:  25%;
+    right: 25%;
+    transform: translateY(50%);
     max-width: 600px;
-    max-height: 300px;
-    box-shadow: rgb(179, 179, 179) 5px 5px 10px;
-
+    max-height: 350px;
 }
 
 .carousel-item{
@@ -40,8 +47,9 @@ img{
 
 .carousel-item-visible{
     display: block;
+    height: 300px;
     animation: fade 250ms ;
-
+    box-shadow: rgb(179, 179, 179) 5px 10px 8px;
 }
 
 .carousel .carousel-actions {
@@ -53,16 +61,6 @@ img{
     transform: translateY(-50%);
 }
 
-.carousel .carousel-actions btn {
-    border-radius: 50px;
-    background-color: white;
-    border: 0;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-}
 
 .carousel .carousel-actions button#carousel-button-prev {
     margin-left: 20px;
