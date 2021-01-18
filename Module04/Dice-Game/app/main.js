@@ -37,7 +37,6 @@ function gameTurnsAndSum(rndNum) {
   if (turn === 1) {
     playerOne += rndNum;
     displayOnDom(oneScoreboard, dicePlayerOne, playerOne);
-    dicePlayerOne.classList.toggle('active');
     turn = 2;
     whoTurnIsNextText(2);
   } else {
@@ -45,7 +44,6 @@ function gameTurnsAndSum(rndNum) {
     playerTwo += rndNum;
 
     displayOnDom(twoScoreboard, dicePlayerTwo, playerTwo);
-    dicePlayerTwo.classList.toggle('active');
     turn = 1;
     whoTurnIsNextText(1);
   }
@@ -58,11 +56,7 @@ function gameTurnsAndSum(rndNum) {
     console.log('Player two Win');
     mainMsg.textContent = 'Player 2 WIN!!! 🎉🎉';
     endGame(true);
-  } else if (
-    playerOne == playerTwo &&
-    playerOne >= maxScore &&
-    playerTwo >= maxScore
-  ) {
+  } else if (playerOne == playerTwo && playerOne >= maxScore && playerTwo >= maxScore) {
     mainMsg.textContent = '🙃!!!DRAW!!🙃 This Never Happen';
     endGame(true);
   }
@@ -73,9 +67,11 @@ function gameTurnsAndSum(rndNum) {
 function whoTurnIsNextText(playerTurn) {
   if (playerTurn === 1) {
     mainMsg.textContent = 'Player 1 Turn ';
+    diceActive(dicePlayerOne,dicePlayerTwo)
     return 1;
   } else if (playerTurn === 2) {
     mainMsg.textContent = 'Player 2 Turn ';
+    diceActive(dicePlayerTwo,dicePlayerOne)
     return 2;
   }
 }
@@ -93,6 +89,11 @@ function endGame(bool) {
 function displayOnDom(playerScoreboard, diceOfPlayer, playerSum) {
   playerScoreboard.textContent = playerSum;
   diceOfPlayer.textContent = diceNum;
+}
+
+function diceActive(diceOfplayer,removeDice) {
+  diceOfplayer.classList.add('active');
+  removeDice.classList.remove('active');
 }
 
 function resetDom() {
