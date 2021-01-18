@@ -37,6 +37,7 @@ function gameTurnsAndSum(rndNum) {
   if (turn === 1) {
     playerOne += rndNum;
     displayOnDom(oneScoreboard, dicePlayerOne, playerOne);
+    dicePlayerOne.classList.toggle('active');
     turn = 2;
     whoTurnIsNextText(2);
   } else {
@@ -44,6 +45,7 @@ function gameTurnsAndSum(rndNum) {
     playerTwo += rndNum;
 
     displayOnDom(twoScoreboard, dicePlayerTwo, playerTwo);
+    dicePlayerTwo.classList.toggle('active');
     turn = 1;
     whoTurnIsNextText(1);
   }
