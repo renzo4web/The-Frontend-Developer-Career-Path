@@ -8,12 +8,14 @@
 </head>
 <body>
     <h1>Snake Game</h1>
-    <h2 class="scoreboard">Score : <span id="score">0</span></h2>
+    <input type="text" name="user" id="user" placeholder="Whats your name??" required>
+    <h2 class="scoreboard"> <span id="userScore"></span> Score : <span id="score">0</span></h2>
     <div id="grid" class="grid">
-
     </div>
     <button class="btn" id="start">Start</button>
     <button class="btn" id="reset">Reset</button>
+    <h3 id="record">Record : 0</h3>
+
     <script src="./app/app.js"></script>
 </body>
 </html>
