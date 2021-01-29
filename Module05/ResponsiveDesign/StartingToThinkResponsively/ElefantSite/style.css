@@ -32,9 +32,8 @@ img {
 
 .container {
     margin: 0 auto;
-    width: 90%;
+    width: 95%;
     max-width: 980px;
-    min-width: 450px;
     border: pink solid 2px;
     padding: 1em;
 }
@@ -46,14 +45,41 @@ header {
 aside {
     background: dodgerblue;
     color: #fff;
+    padding: 1em;
 }
 
 .section {
     display: flex;
-    margin-top: 1em;
+    margin: 1em 0;
+    justify-content: space-between;
+    align-content: flex-start;
 }
 
-.col {
-    margin: 0.75em;
-    padding: 0.5em;
+.col-1 {
+    width: 20%;
+}
+
+.col-2 {
+    width: 45%;
+}
+
+.col-3 {
+    width: 70%;
+}
+
+/* Media Query  */
+
+@media (max-width: 600px) {
+    .section {
+        flex-direction: column;
+    }
+
+    .col-1,
+    .col-2,
+    .col-3 {
+        width: 100%;
+    }
+    aside {
+        padding: 0;
+    }
 }
