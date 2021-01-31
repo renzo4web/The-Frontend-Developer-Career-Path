@@ -1,28 +1,129 @@
-
-h1{
+h1 {
     margin: 0;
 }
 
-header{
+ul,
+li,
+ol {
+    list-style-type: none;
+}
+
+body {
+    background-color: #f8f8f8;
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+}
+
+header {
+    background-color: bisque;
     margin: 0 auto;
-    width: 99%;
-    max-width: 800px;
+    width: 100%;
+    border: pink 2px solid;
+    padding: 2em 0;
+}
+/* =================
+        Typography
+================= */
+h1 {
+    margin-top: 0;
+    font-family: "Lora", serif;
+    font-weight: 400;
+    font-size: 2rem;
 }
 
-.header-title{
-    font-family: 'Lora', serif;
-    text-align: center;
-    font-size: 3.35rem;
+.header-title {
     margin-bottom: 0;
+    color: #143774;
 }
 
-.subtitle{
+.subtitle {
+    text-transform: uppercase;
+    font-size: 700;
+    font-family: "Ubuntu", sans-serif;
     font-size: 1rem;
     margin-bottom: 0;
+    color: #1792d2;
 }
 
-nav {
-    max-width: 65%;
+/* =================
+        Layout
+================= */
+
+.container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1350px;
+    padding: 0;
+}
+
+.container-nav {
+    display: flex;
+    justify-content: space-between;
+    border: pink 2px solid;
+}
+
+.list-container {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 2em;
+}
+
+.nav-item a {
     font-size: 1rem;
-    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #707070;
+    padding: 0.25em 0;
+    text-decoration: none;
+}
+
+.nav-item a:hover,
+.nav-item a:focus {
+    color: #1792d2;
+}
+
+.current-page {
+    border-bottom: 2px solid royalblue;
+}
+
+.current-page:hover {
+    cursor: pointer;
+}
+
+/* =================
+        mediaquery
+================= */
+
+@media (max-width: 650px) {
+    .list-container {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .nav-item {
+        margin: 0.5em 2em;
+    }
+}
+
+@media (max-width: 950px) {
+    .header-title {
+        text-align: center;
+        margin: 0 auto;
+        border: pink 2px solid;
+    }
+    .container-nav {
+        display: block;
+        justify-content: space-between;
+        border: pink 2px solid;
+    }
+    .nav-item {
+        margin-right: 2em;
+    }
+    .nav-item__link:hover {
+        border-bottom: 10% solid #707070;
+    }
 }
