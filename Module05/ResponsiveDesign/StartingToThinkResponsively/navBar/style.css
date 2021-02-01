@@ -36,6 +36,7 @@ h1 {
     color: #143774;
 }
 
+/* h1 subtitle */
 .subtitle {
     text-transform: uppercase;
     font-size: 700;
@@ -43,6 +44,34 @@ h1 {
     font-size: 1rem;
     margin-bottom: 0;
     color: #1792d2;
+}
+
+.article-title {
+    margin-top: 0;
+    font-family: "Lora", serif;
+    font-size: 1.5rem;
+    color: #143774;
+}
+.article-body-text {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #707070;
+}
+.article-info {
+    font-size: 0.875rem;
+    color: #707070;
+}
+.readMore {
+    color: #1792d2;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.readMore:hover,
+.readMore:focus {
+    color: #143774;
 }
 
 /* =================
@@ -60,6 +89,15 @@ h1 {
     display: flex;
     justify-content: space-between;
     border: pink 2px solid;
+}
+
+.container-main {
+    display: flex;
+    border: pink 2px solid;
+}
+
+.sidebar {
+    width: 20%;
 }
 
 .list-container {
@@ -92,6 +130,15 @@ h1 {
 
 .current-page:hover {
     cursor: pointer;
+}
+
+.secondary-articles-container {
+    display: flex;
+}
+
+.widget-img {
+    max-width: 200px;
+    width: 100%;
 }
 
 /* =================
