@@ -9,7 +9,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-            href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:400,700&display=swap"
+            href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,700&display=swap"
             rel="stylesheet"
         />
         <title>Nav bar</title>
@@ -17,7 +17,7 @@
     </head>
     <body>
         <header>
-            <div class="container container-nav">
+            <div class="container container-flex">
                 <div class="header-title">
                     <h1>Autonomous Cars</h1>
                     <span class="subtitle">Relax and enjoy the road</span>
@@ -39,14 +39,13 @@
             </div>
         </header>
         <!--------------------------MAIN---------------------------------------->
-        <!--------------------------MAIN---------------------------------------->
-        <!--------------------------MAIN---------------------------------------->
-        <main class="container container-main">
+        <main class="container container-flex">
             <section class="feed-container">
                 <section class="principal-article">
+                    <h2 class="article-title">Finding simplicity in life</h2>
                     <figure>
                         <img
-                            src="https://www.alphr.com/wp-content/uploads/2016/04/autonomous_car_1.jpg"
+                            src="./img/life.jpg"
                             alt="Mercedes benz concept car"
                             class="principal-article-image"
                         />
@@ -54,21 +53,24 @@
                             July 23 ,2019 | 3 comments
                         </figcaption>
                     </figure>
-                    <h2 class="article-title">The car of the future</h2>
-                    <p>
-                        Life can get complicated really quickly, but it doesn't have
-                        to be! There are many ways to simplify your life, a few of
-                        which we've <a href="#">explored in the past</a>. This week
-                        we're taking a bit of a approach though, in how you can find
-                        simplicity in the life you already living.
+
+                    <p class="article-body-text">
+                        <strong class="accent-bold"
+                            >Life can get complicated really quickly</strong
+                        >, but it doesn't have to be! There are many ways to simplify
+                        your life, a few of which we've
+                        <a class="article-link" href="#">explored in the past</a>.
+                        This week we're taking a bit of a approach though, in how you
+                        can find simplicity in the life you already living.
                     </p>
+                    <a class="readMore" href="#">continue reading</a>
                 </section>
                 <!--------------------------SECONDARY------------------------------->
                 <section class="secondary-articles">
                     <article class="secondary-articles-container">
                         <figure>
                             <img
-                                src="https://i0.wp.com/www.whatafuture.com/wp-content/uploads/2020/09/toyota-1184618_1920.jpg?resize=256%2C256"
+                                src="./img/food.jpg"
                                 alt="White futuristic car"
                                 class="secondary-articles-image"
                             />
@@ -90,7 +92,7 @@
                     <article class="secondary-articles-container">
                         <figure>
                             <img
-                                src="https://i0.wp.com/www.whatafuture.com/wp-content/uploads/2020/09/toyota-1184618_1920.jpg?resize=256%2C256"
+                                src="./img/life.jpg"
                                 alt="White futuristic car"
                                 class="secondary-articles-image"
                             />
@@ -112,7 +114,7 @@
                     <article class="secondary-articles-container">
                         <figure>
                             <img
-                                src="https://i0.wp.com/www.whatafuture.com/wp-content/uploads/2020/09/toyota-1184618_1920.jpg?resize=256%2C256"
+                                src="./img/deco.jpg"
                                 alt="White futuristic car"
                                 class="secondary-articles-image"
                             />
@@ -136,10 +138,11 @@
             <!--------------------------ASIDE------------------------------->
             <aside class="sidebar">
                 <section class="about-me">
+                    <h2 class="widget-title">About Me</h2>
                     <img
                         src="./img/about-me.jpg"
                         alt="Author smiling"
-                        class="widget-img"
+                        class="widget-img-avatar"
                     />
                     <p class="about-me-p">
                         I find life better, and I'm happier, when things are nice and
@@ -147,27 +150,19 @@
                     </p>
                 </section>
                 <section class="recent-posts">
-                    <h2 class="recent-posts-title">Recent Posts</h2>
+                    <h2 class="widget-title">Recent Posts</h2>
                     <div class="widget-recent-post">
-                        <img
-                            src="https://i0.wp.com/www.whatafuture.com/wp-content/uploads/2020/09/toyota-1184618_1920.jpg?resize=256%2C256"
-                            alt="White futuristic car"
-                            class="widget-img"
-                        />
+                        <img src="./img/life.jpg" class="widget-img" />
+                        <h3 class="widget-recent-post-title">Concept car</h3>
+                    </div>
+                    <div class="widget-recent-post">
+                        <img src="./img/food.jpg" alt="Food" class="widget-img" />
                         <h3 class="widget-recent-post-title">Concept car</h3>
                     </div>
                     <div class="widget-recent-post">
                         <img
-                            src="https://i0.wp.com/www.whatafuture.com/wp-content/uploads/2020/09/toyota-1184618_1920.jpg?resize=256%2C256"
-                            alt="White futuristic car"
-                            class="widget-img"
-                        />
-                        <h3 class="widget-recent-post-title">Concept car</h3>
-                    </div>
-                    <div class="widget-recent-post">
-                        <img
-                            src="https://i0.wp.com/www.whatafuture.com/wp-content/uploads/2020/09/toyota-1184618_1920.jpg?resize=256%2C256"
-                            alt="White futuristic car"
+                            src="./img/deco.jpg"
+                            alt="green plant"
                             class="widget-img"
                         />
                         <h3 class="widget-recent-post-title">Concept car</h3>
@@ -175,8 +170,7 @@
                 </section>
             </aside>
         </main>
-        <!--------------------------FOOTER---------------------------------------->
-        <!--------------------------FOOTER---------------------------------------->
+
         <!--------------------------FOOTER---------------------------------------->
         <footer>made by @soyrenzo</footer>
     </body>
