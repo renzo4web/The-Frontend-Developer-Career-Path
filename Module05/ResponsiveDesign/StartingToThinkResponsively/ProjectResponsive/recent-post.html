@@ -12,7 +12,7 @@
             href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,700&display=swap"
             rel="stylesheet"
         />
-        <title>Life</title>
+        <title>Recent Posts</title>
         <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
@@ -25,16 +25,14 @@
 
                 <nav>
                     <ul class="list-container">
-                        <li>
-                            <a class="nav-item current-page">Home</a>
+                        <li >
+                            <a class="nav-item" href="./index.html">Home</a>
                         </li>
-                        <li>
+                        <li >
                             <a class="nav-item" href="./about.html">About me</a>
                         </li>
-                        <li>
-                            <a class="nav-item" href="./recent-post.html"
-                                >Recent Post</a
-                            >
+                        <li >
+                            <a class="nav-item current-page" >Recent Post</a>
                         </li>
                     </ul>
                 </nav>
@@ -42,29 +40,26 @@
         </header>
         <!--------------------------MAIN---------------------------------------->
         <main class="container container-flex">
-            <section class="feed-container">
-                <section class="principal-article">
-                    <h2 class="article-title">Finding simplicity in life</h2>
-                    <figure class="principal-article-image">
-                        <img src="./img/life.jpg" alt="Mercedes benz concept car" />
+            <section class="secondary-articles">
+                <article class="secondary-articles-container">
+                    <figure class="article-secondary-img">
+                        <img src="./img/life.jpg" alt="Mercedes benz concept car" class="secondary-articles-image"/>
                         <figcaption class="article-info">
                             July 23 ,2019 | 3 comments
                         </figcaption>
                     </figure>
-
-                    <p class="article-body-text">
-                        <strong class="accent-bold"
-                            >Life can get complicated really quickly</strong
-                        >, but it doesn't have to be! There are many ways to simplify
+                <div class="article-secondary-text">
+                    <h2 class="article-title">Finding simplicity in life</h2>
+                    <p class="article-body-text"> <strong class="accent-bold">Life can get complicated really quickly</strong>, but it doesn't have to be! There are many ways to simplify
                         your life, a few of which we've
                         <a class="article-link" href="#">explored in the past</a>.
                         This week we're taking a bit of a approach though, in how you
                         can find simplicity in the life you already living.
                     </p>
                     <a class="readMore" href="#">continue reading</a>
-                </section>
-                <!--------------------------SECONDARY------------------------------->
-                <section class="secondary-articles">
+                    </div>
+                </article>
+
                     <article class="secondary-articles-container">
                         <figure class="article-secondary-img">
                             <img
@@ -77,7 +72,7 @@
                             </figcaption>
                         </figure>
                         <div class="article-secondary-text">
-                            <h2 class="article-title">Concept car</h2>
+                            <h2 class="article-title"> Keeping cooking simple</h2>
                             <p class="article-body-text">
                                 Food is a very important part of everyone's life. If
                                 you want to be healthy, you have to eat healthy. One
@@ -99,7 +94,7 @@
                             </figcaption>
                         </figure>
                         <div class="article-secondary-text">
-                            <h2 class="article-title">Concept car</h2>
+                            <h2 class="article-title">Simple decorations</h2>
                             <p class="article-body-text">
                                 Food is a very important part of everyone's life. If
                                 you want to be healthy, you have to eat healthy. One
@@ -121,7 +116,7 @@
                             </figcaption>
                         </figure>
                         <div class="article-secondary-text">
-                            <h2 class="article-title">Concept car</h2>
+                            <h2 class="article-title">Simplicity and work</h2>
                             <p class="article-body-text">
                                 Food is a very important part of everyone's life. If
                                 you want to be healthy, you have to eat healthy. One

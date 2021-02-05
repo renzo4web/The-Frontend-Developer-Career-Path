@@ -34,6 +34,16 @@ header {
     width: 100%;
     margin-bottom: 3em;
 }
+
+footer {
+    text-align: center;
+    background-color: #1792d2;
+    color: #fff;
+    padding: 0.5em 0;
+    margin-bottom: 0;
+    margin-top: 2em;
+}
+
 /* =================
         Typography
 ================= */
@@ -104,10 +114,42 @@ h1 {
 }
 
 .widget-title {
+    font-size: 1rem;
     text-transform: uppercase;
+    color: #143774;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+}
+
+.widget-recent-post-title {
+    font-size: 1rem;
     color: #143774;
     font-family: "Lora", serif;
     font-weight: 300;
+}
+
+/* About me */
+
+.aboutme-title {
+    color: #143774;
+    font-family: "Lora", serif;
+    font-weight: 300;
+    margin-bottom: 0.3em;
+}
+
+.aboutme-subtitle {
+    color: #1792d2;
+    font-family: "Lora", serif;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+}
+
+.aboutme-body-text {
+    margin-bottom: 0.3em;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: #707070;
 }
 
 /* =================
@@ -133,7 +175,7 @@ h1 {
     justify-content: space-between;
 }
 
-.nav-item a {
+.nav-item {
     font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -142,17 +184,18 @@ h1 {
     text-decoration: none;
 }
 
-.nav-item a:hover,
-.nav-item a:focus {
+.nav-item:hover,
+.nav-item:focus {
     color: #1792d2;
 }
 
 .current-page {
-    border-bottom: 2px solid royalblue;
+    color: #1792d2;
 }
 
-.current-page:hover {
-    cursor: pointer;
+.current-page:hover,
+.current-page:focus {
+    cursor: default;
 }
 
 .principal-article {
@@ -177,8 +220,49 @@ figure {
     order: 1;
 }
 
+/*  widget */
+
+.about-me,
+.recent-posts {
+    border: 0.8em solid #f7ece6;
+    padding: 1em;
+}
+
+.about-me {
+    margin-bottom: 2em;
+}
+
+/*Recent Posts */
+
+.recent-posts {
+    display: flex;
+    flex-direction: column;
+}
+
+.widget-img {
+    order: -1;
+}
+
+.widget-recent-post {
+    border-bottom: #707070 solid 1px;
+    margin-bottom: 1em;
+}
+
+.widget-recent-post:last-child {
+    border: 0;
+    margin: 0;
+}
+
+/* About me  */
+
+.aboutme-img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+}
+
 /* =================
-        mediaquery
+     mediaquery
 ================= */
 
 @media (min-width: 675px) {
@@ -214,6 +298,7 @@ figure {
 
     .sidebar {
         width: 25%;
+        min-width: 200px;
         margin-left: 1.5em;
     }
 
