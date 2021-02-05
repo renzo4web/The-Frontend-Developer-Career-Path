@@ -1,0 +1,40 @@
+/* DON'T TOUCH THIS! */
+
+body {
+	background: #5e5e5e;
+}
+
+.box-red {
+	width: 400px;
+	background: #e07979;
+	height: 400px;
+}
+
+.box-green {
+	width: 300px;
+	background: #77e083;
+	height: 300px;
+}
+
+.box-blue {
+	width: 200px;
+	background: #77b4e0;
+	height: 200px;
+}
+/* DON'T TOUCH THIS! */
+
+/* ==========================
+	Write your solution here!
+   ========================== */
+   
+   .box{
+       width: 100%
+   }
+   
+   .box-green{
+       width: 50%;
+   }
+   
+   .box-blue{
+       width: 50%
+   }
