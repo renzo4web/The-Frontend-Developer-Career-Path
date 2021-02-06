@@ -1,0 +1,96 @@
+/* DON'T TOUCH THIS! */
+body {
+	margin: 0;
+	font-family: 'Ubuntu', sans-serif;
+	overflow-x: hidden;
+}
+.header {
+	font-family: 'Lora', serif;
+	color: #143774;
+	background: #F8F8F8;
+	text-align: center;
+	font-size: 3rem;
+	font-weight: 400;
+	padding: 0.75em;
+	margin: 0;
+	width: 100%;
+}
+
+.post-title {
+	color: #1792D2;
+	font-size: 2rem;
+}
+
+.post-description {
+	color: #707070;
+	font-size: 1.125rem;
+}
+
+.post {
+	background: #E1E1E1;
+}
+/* DON'T TOUCH THIS! */
+
+/* ==========================
+	Write your solution here!
+   ========================== */
+
+.header{
+    margin-top: 0;
+	padding: 1em 0;
+	
+}
+
+   .posts{
+       display: flex;
+       flex-flow: column wrap; 
+       align-items: center;
+	   margin: 0 auto;
+   }
+   
+   .post{
+	   width: 90%;
+       border-radius: 1em; 
+       margin-bottom: 1.5em;
+       	display: flex;
+    	flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+   }
+   
+   .post-title{
+       font-size: 2.3rem;
+   }
+   
+   .post * {
+	   margin: 1em;
+   }
+   
+   .post-description{
+       text-align: center;
+       font-size: 1rem;
+       order:1;
+       color: #000;
+   }
+   .post-image{
+       width: 80%;
+	   object-fit:cover; 
+        order:2;
+   }
+   
+   
+   
+   @media (min-width : 600px){
+       
+
+       .posts{
+		   flex-flow:row wrap; 
+		   justify-content: center;
+       }
+       
+	   .post{
+		   width: 40%;
+		   margin: 1em;
+	   }
+	   
+   }
