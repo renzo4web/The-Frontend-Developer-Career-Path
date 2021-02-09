@@ -1,0 +1,80 @@
+/* DON'T TOUCH THIS! */
+body {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas:
+	"1 2",
+	"3 4"
+	;
+	height: 100vh;
+	margin: 0;
+}
+
+.box {
+	border: 5px solid black;
+}
+
+
+.box-1 {
+	background: #db4242;
+}
+
+.box-2 {
+	background: #427ddb;
+}
+
+.box-3 {
+	background: #63db42;
+}
+
+.box-4 {
+	background: #f0e54a;
+}
+/* DON'T TOUCH THIS! */
+
+/* ==========================
+	Write your solution here!
+   ========================== */
+   
+   .box{
+	   opacity: 0;
+   }
+   
+   .box-1{
+	   opacity: 1;
+   }
+   
+@media (min-width:250px){
+	   
+	.box{
+	   opacity: 0;
+   	}
+	.box-2{
+	   opacity: 1;
+   	}
+	  
+}
+   
+@media (min-width:450px){
+	   
+	.box{
+	   opacity: 0;
+   	}
+	.box-3{
+	   opacity: 1;
+	   
+   	}
+	  
+}
+   
+@media (min-width:750px){
+	   
+	.box{
+	   opacity: 0;
+   	}
+	.box-4{
+	   opacity: 1;
+   	}
+	  
+}

@@ -1,0 +1,42 @@
+/* DON'T TOUCH THIS! */
+body {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+}
+
+.box {
+	width: 40%;
+	min-height: 200px;
+	margin: 1em;
+	border: 5px solid black;
+}
+
+.box-red {
+	background: #db4242;
+}
+
+.box-blue {
+	background: #427ddb;
+}
+
+.box-green {
+	background: #63db42;
+}
+
+.box-yellow {
+	background: #f0e54a;
+}
+/* DON'T TOUCH THIS! */
+
+/* ==========================
+	Write your solution here!
+   ========================== */
+   
+     
+    body{
+		  flex-flow: row wrap;
+		  justify-content: center;	
+	  }
+	  
