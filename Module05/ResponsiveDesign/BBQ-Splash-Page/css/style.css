@@ -1,0 +1,182 @@
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Typography */
+
+h1 {
+    margin: 2em 0;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    font-size: 2.25rem;
+    order: 1;
+    line-height: 1.2;
+}
+
+h2 {
+    margin-top: 2em;
+    font-size: 1.3125rem;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+h3 {
+    margin-top: 0.3em;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #f18119;
+}
+
+small {
+    font-size: 0.625rem;
+    color: #f18119;
+}
+
+.top-text {
+    order: 0;
+    text-align: center;
+    display: inline-block;
+    border-top: 0.8em solid #f18119;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 0;
+}
+
+.subtitle {
+    order: 2;
+    color: #f18119;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+/* Layout */
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro {
+    padding: 1em 3em;
+    padding-top: 0;
+    background-image: url(../images/dark-ribs.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.main-content {
+    text-align: center;
+    padding: 0 1em;
+}
+
+.description {
+    margin-top: 2em;
+    color: #5a5a5a;
+    margin-bottom: 0;
+}
+
+form {
+    padding: 0 2.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input {
+    text-align: center;
+    padding: 0.5em 0;
+    width: 100%;
+    margin-top: 1em;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #818181;
+    border-radius: 7px;
+    opacity: 1;
+}
+
+.btn {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.8rem;
+    /* Layout */
+    padding: 1em 0;
+    border: none;
+    margin-top: 1em;
+    width: 100%;
+    border-radius: 7px;
+    background: transparent linear-gradient(270deg, #ff713b 0%, #ffa51d 100%) 0% 0%
+        no-repeat padding-box;
+}
+
+.btn:hover,
+.btn:focus {
+    cursor: pointer;
+    background: transparent linear-gradient(270deg, #ffa51d 0%, #ff713b 100%) 0% 0%
+        no-repeat padding-box;
+}
+
+input,
+.btn {
+    max-width: 50%;
+}
+
+@media (min-width: 800px) {
+    h1 {
+        font-size: 400;
+        font-size: 3.5rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    .subtitle {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+    body {
+        font-size: 1.125rem;
+    }
+
+    small {
+        font-size: 0.625rem;
+    }
+
+    /* Layout*/
+    .flex {
+        flex-direction: row;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .intro {
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    h1 {
+        margin-top: 5em;
+        margin-bottom: 0;
+    }
+
+    .top-text {
+        margin-top: 0.8em;
+    }
+
+    input,
+    .btn {
+        max-width: 50%;
+    }
+}
