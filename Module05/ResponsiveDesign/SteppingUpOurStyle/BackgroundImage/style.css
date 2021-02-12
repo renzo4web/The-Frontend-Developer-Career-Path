@@ -1,0 +1,18 @@
+* {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+h1 {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 10px;
+    line-height: 1.6;
+    border-bottom: solid 2px white;
+}
+
+body {
+    padding: 30%;
+    background-image: url(./solen-feyissa-5NzySHOZHX4-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}

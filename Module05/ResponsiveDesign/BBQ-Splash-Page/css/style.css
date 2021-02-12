@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Source Sans Pro", sans-serif;
     margin: 0;
@@ -8,17 +12,16 @@ body {
 /* Typography */
 
 h1 {
-    margin: 2em 0;
+    margin: 1em 0;
     font-weight: 400;
     color: #fff;
     text-align: center;
     font-size: 2.25rem;
-    order: 1;
     line-height: 1.2;
 }
 
 h2 {
-    margin-top: 2em;
+    margin-top: 1em;
     font-size: 1.3125rem;
     margin-bottom: 0;
     line-height: 1;
@@ -32,27 +35,32 @@ h3 {
 }
 
 small {
+    margin-top: 1em;
     font-size: 0.625rem;
     color: #f18119;
+    font-style: italic;
 }
 
 .top-text {
-    order: 0;
+    font-size: 0.625rem;
+    order: -1;
     text-align: center;
     display: inline-block;
     border-top: 0.8em solid #f18119;
+    border-image: linear-gradient(270deg, #ff713b 0%, #ffa51d 100%) 1;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-top: 0;
+    margin: 0;
+    line-height: 2.5;
 }
 
 .subtitle {
-    order: 2;
     color: #f18119;
     font-weight: 900;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 0.5em;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* Layout */
@@ -67,24 +75,27 @@ small {
 .intro {
     padding: 1em 3em;
     padding-top: 0;
-    background-image: url(../images/dark-ribs.jpg);
+    background-color: #5a5a5a;
+    background-image: url(../images/ribs.jpg);
+    background-blend-mode: multiply;
     background-position: center;
     background-size: cover;
 }
 
 .main-content {
+    background-color: #fffdfc;
     text-align: center;
     padding: 0 1em;
 }
 
 .description {
-    margin-top: 2em;
+    margin: 1.5em 0;
     color: #5a5a5a;
-    margin-bottom: 0;
 }
 
 form {
-    padding: 0 2.5em;
+    max-width: 400px;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,11 +106,14 @@ input {
     text-align: center;
     padding: 0.5em 0;
     width: 100%;
-    margin-top: 1em;
+    margin-bottom: 0.75em;
     background: #ffffff 0% 0% no-repeat padding-box;
     border: 1px solid #818181;
-    border-radius: 7px;
+    border-radius: 5px;
     opacity: 1;
+    outline-color: #ff713b;
+    transform: scale(1);
+    transition: transform 250ms;
 }
 
 .btn {
@@ -110,26 +124,37 @@ input {
     /* Layout */
     padding: 1em 0;
     border: none;
-    margin-top: 1em;
     width: 100%;
     border-radius: 7px;
-    background: transparent linear-gradient(270deg, #ff713b 0%, #ffa51d 100%) 0% 0%
-        no-repeat padding-box;
+    background-image: linear-gradient(270deg, #ff713b 0%, #ffa51d 100%);
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+input:focus {
+    transform: scale(1.1);
+    caret-color: red;
 }
 
 .btn:hover,
 .btn:focus {
+    transform: scale(1.1);
+    color: #000;
     cursor: pointer;
-    background: transparent linear-gradient(270deg, #ffa51d 0%, #ff713b 100%) 0% 0%
-        no-repeat padding-box;
+    background-image: linear-gradient(270deg, #ffa51d 0%, #ff713b 100%);
+    outline-color: #ff713b;
 }
 
-input,
-.btn {
-    max-width: 50%;
+/* Very large screen */
+
+.intro *,
+.main-content * {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 637px) {
     h1 {
         font-size: 400;
         font-size: 3.5rem;
@@ -152,31 +177,42 @@ input,
     /* Layout*/
     .flex {
         flex-direction: row;
-        height: 100vh;
         margin: 0;
+        align-items: center;
     }
 
     .intro {
-        width: 100%;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: space-between;
+    }
+
+    .intro,
+    .main-content {
+        width: 50%;
+        min-height: 100vh;
     }
 
     .main-content {
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 2em;
+        justify-content: center;
     }
 
     h1 {
-        margin-top: 5em;
-        margin-bottom: 0;
+        margin: 0;
     }
 
     .top-text {
-        margin-top: 0.8em;
+        margin-top: 0em;
+    }
+
+    form {
+        width: 100%;
     }
 
     input,
     .btn {
-        max-width: 50%;
+        width: 50%;
     }
 }
