@@ -1,8 +1,15 @@
 .container {
-  width: 100%;
+  width: 70%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-evenly;
+  margin-bottom: 5em;
+}
+
+@media (min-width: 800px) {
+  .container {
+    width: 100%;
+  }
 }
 
 .card-beer {
@@ -11,9 +18,8 @@
   max-width: 300px;
   min-width: 300px;
   max-height: 600px;
-  width: 40%;
+  width: 45%;
   padding: 2em 0;
-  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,10 +31,11 @@
     0 41.8px 33.4px rgba(0, 0, 0, 0.05),
     0 100px 80px rgba(0, 0, 0, 0.07);
   position: relative;
-  overflow: hidden;
 
   .card-beer__title {
-    color: #000;
+    display: inline;
+    padding: 0 2em;
+    color: rgb(201, 110, 18);
   }
 
   img {
@@ -38,31 +45,44 @@
   .card-beer__stats {
     width: 70%;
     display: inline-flex;
+    color: rgb(223, 141, 3);
     justify-content: space-between;
   }
 
   .card__description {
     opacity: 0;
     position: absolute;
-    height: 100%;
     top: 0;
     left: 0;
     transition: opacity 0.4s ease-in-out;
     display: flex;
     flex-direction: column;
     //align-items: center;
-    //font-size: 1.3rem;
-    padding: 1em 2em;
+    font-size: 1.3rem;
+    padding: 2em 2em;
     color: #000;
     background-color: rgba(255, 255, 255, 0.9);
 
     h4 {
       font-size: 2rem;
+      color: rgb(201, 110, 18);
       margin: 0;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
+      font-weight: 400;
+      margin: 0.5em 0;
+    }
+
+    em {
+      font-weight: 800;
     }
 
     .card__tagline {
       font-style: italic;
+      font-size: 1.2rem;
       border-bottom: 2px solid dodgerblue;
     }
   }
@@ -71,5 +91,7 @@
     .card__description {
       opacity: 1;
     }
+
+    overflow-y: scroll;
   }
 }

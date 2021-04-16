@@ -9,9 +9,15 @@ $body-color: slateblue;
   box-sizing: border-box;
 }
 
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+
 body {
   color: $body-color;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,9 +29,19 @@ h1 {
   font-style: italic;
   font-weight: 800;
   margin: 0;
-  padding: 0.5em 5em;
+  padding: 1em;
   font-size: 2.3rem;
-  background-color: dodgerblue;
-  color: black;
-  margin-bottom: 1em;
+  background-color: $heroBackground;
+  color: #fff;
+}
+
+footer {
+  background-color: $footerBackground;
+  width: 100vw;
+  text-align: center;
+
+  a {
+    font-weight: bold;
+    text-decoration: none;
+  }
 }

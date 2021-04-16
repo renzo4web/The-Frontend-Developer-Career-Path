@@ -1,5 +1,5 @@
 import {fetchApi} from "./provider";
-import {renderBeerCard} from "./page";
+import {currentPageOnDOM, renderBeerCard} from "./page";
 import {disabledAllBtns, getBtns} from "./controls.btn";
 import {filtersABV, filtersIBU} from "./filters";
 
@@ -7,9 +7,11 @@ const [buttonsPage, ...buttonsFilter] = getBtns();
 const [buttonsIBU, buttonsABV] = buttonsFilter;
 const mainHTML = document.querySelector('main');
 let currentPage = 1;
+let currentAmountOfBeers = 0;
 
 
 const renderAllBeers = (beers) => {
+    currentAmountOfBeers = beers.length;
     mainHTML.innerHTML = beers.map(renderBeerCard).join('');
 };
 
@@ -29,13 +31,12 @@ const renderPage = async (page) => {
 const handleClickFilters = ({currentTarget}) => {
 
     currentTarget.id.includes('alcohol')
-    ? filtersABV(currentTarget)
-    : filtersIBU(currentTarget);
+        ? filtersABV(currentTarget)
+        : filtersIBU(currentTarget);
 
     (currentTarget.id.includes('alcohol')
-     ? buttonsABV
-     : buttonsIBU)
-        .forEach(btn => btn.classList.remove('card__btn--clicked'));
+        ? buttonsABV
+        : buttonsIBU).forEach(btn => btn.classList.remove('card__btn--clicked'));
 
     currentTarget.classList.add('card__btn--clicked');
 
@@ -43,10 +44,32 @@ const handleClickFilters = ({currentTarget}) => {
 
 const handleClickPage = ({currentTarget}) => {
 
-    (currentTarget.id === 'btnPageRight')
-    ? currentPage += 1
-    : currentPage -= 1;
+    const amountOfBeersRequested = 25;
 
+    const [btnRight, btnLeft] = buttonsPage;
+
+
+    if (currentTarget === btnLeft && currentPage === 1) {
+        btnLeft.disabled = true;
+        return;
+    } else {
+        btnLeft.disabled = false;
+    }
+
+
+    if (currentTarget === btnRight && currentAmountOfBeers < amountOfBeersRequested) {
+        btnRight.disabled = true;
+        return;
+    } else {
+        btnRight.disabled = false;
+    }
+
+
+    (currentTarget.id === 'btnPageRight')
+        ? currentPage += 1
+        : currentPage -= 1;
+
+    currentPageOnDOM(currentPage);
     renderPage(currentPage);
 };
 
@@ -59,6 +82,7 @@ const eventHandlers = () => {
 
 const init = async () => {
     await renderPage(currentPage);
+    currentPageOnDOM(currentPage);
     eventHandlers();
 };
 
