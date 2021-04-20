@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  background-color: #2a1a1f;
+}
+
+.flexbox-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.flexbox-container img,
+.fullimg-container img {
+  border: 0.1rem solid #fff;
+  border-radius: 0.7rem;
+  margin: 1em;
+}
+
+.flexbox-container img {
+  cursor: pointer;
+}

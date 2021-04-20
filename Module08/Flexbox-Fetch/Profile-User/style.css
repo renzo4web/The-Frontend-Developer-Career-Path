@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* min-height: 100vh; */
+  font-family: "Lucida Console", Monaco, monospace; 
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+.flex {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  padding: 1em 2em;
+}
+
+.card {
+  width: 100%;
+  min-height: 100vh;
+  /* max-width: 700px; */
+  background-color: #ffd60a;
+  font-size: 1.5rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+
+.card p{
+    margin: 0.7rem 0;
+}
+
+.card__name {
+  background-color: #003566;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+}
+
+.card__personal-info {
+  background-color: #003566;
+  color: #fff;
+  padding: 1em 2em;
+}
+
+.card__company-info {
+    background-color: #ff9e00;
+    text-align: left;
+}
+
+.card__contact-info {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background-color: #3c096c;
+    color: #fff;
+}
