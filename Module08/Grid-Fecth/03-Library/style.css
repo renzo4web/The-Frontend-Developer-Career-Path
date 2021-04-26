@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --coverColor: #efefef;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 2em;
+  background-color: lightyellow;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
+  gap: 1em 1.5em;
+}
+
+.book {
+    display: grid;
+    grid-template-columns: 1rem auto;
+    grid-template-areas: 'side cover';
+    width: 100%;
+    height: 100%;
+}
+.book__footer {
+  margin: 0;
+}
+
+.book__cover {
+  background-color: var(--coverColor);
+  padding: 5rem 1rem;
+  grid-area: cover;
+  border-bottom: solid 1rem black;
+}
+
+.book__cover p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.book__side {
+  grid-area: side;
+  background-color: #000;
+  border-left: 1em solid dodgerblue;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+}
