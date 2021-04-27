@@ -1,14 +1,150 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    min-height:  100vh;
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow-y: hidden;
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  text-align: center;
+  padding: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
+form {
+  margin: 2em auto;
+  display: flex;
+}
+
+input {
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 900;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-size: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2em;
+}
+
+.show {
+  display: grid;
+  grid-template-areas:
+    'img img'
+    'title title'
+    'summary summary'
+    'rating btn';
+  gap: 1em;
+  border-radius: 1em;
+  overflow: hidden;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.show img {
+  width: 100%;
+  object-fit: cover;
+  grid-area: img;
+  grid-row: span 1;
+}
+
+.show h3 {
+  text-align: center;
+  grid-area: title;
+}
+
+.show__summary {
+  grid-area: summary;
+  overflow: scroll;
+  max-height: 20ch;
+  padding: 1em;
+  line-height: 1.5;
+}
+
+.btn-info {
+  font-size: 1rem;
+  cursor: pointer;
+  grid-area: btn;
+  padding: 0.5rem 2rem;
+  border: none;
+  font-weight: 900;
+  background-color: coral;
+  transition: background-color 250ms ease-out;
+  border-radius: 1em;
+  align-items: end;
+  justify-content: end;
+}
+
+.btn-info:focus,
+.btn-info:hover {
+  background-color: orange;
+}
+
+.show__rating {
+  grid-area: rating;
+  margin: auto;
+}
+
+.modal {
+  overflow-y: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: coral;
+  z-index: 1;
+  transition: all 250ms ease;
+}
+
+.modal-inner {
+}
+
+.modal-outer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal-inner .show {
+  width: 23rem;
+  display: grid;
+  grid-template-areas:
+    'img img'
+    'title title'
+    'summary summary'
+    'seasons seasons'
+    'rating btn';
+  gap: 1em;
+  border-radius: 1em;
+  overflow: hidden;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.modal-inner .show img {
+}
+
+.show__seasons {
+  grid-area: seasons;
+}
+
