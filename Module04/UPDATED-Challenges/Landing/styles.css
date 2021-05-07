@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --accent: #99d930;
+    --bg-dark: #252525;
+    --bg-light: #ffffff;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.accent {
+    color: var(--accent);
+    display: block;
+    font-weight: 700;
+}
+
+.header {
+    width: 100%;
+    background-color: var(--bg-dark);
+    color: #fff;
+    padding: 3em;
+}
+
+.header h1 {
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+.header__name-accent {
+    display: block;
+    font-weight: 700;
+    font-size: 2.1rem;
+}
+
+.header__img {
+    max-width: 130px;
+}
+
+.work__section {
+    padding: 3em;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work__section h2 {
+}
+
+.section_heading {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin: 1em 0;
+    border-top: 1px solid rgb(168, 168, 168);
+    border-bottom: 1px solid rgb(168, 168, 168);
+    width: fit-content;
+    padding: 0.5em 0;
+}
+
+.work__section strong {
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+.work__section p {
+    max-width: 40ch;
+    line-height: 1.4;
+    margin: 1em 0;
+    font-weight: 300;
+}
+
+.btn {
+    cursor: pointer;
+    font-weight: 700;
+    color: #252525;
+    background-color: var(--accent);
+    border: none;
+    font-size: 1.125rem;
+    padding: 0.3em 1em;
+    border-radius: 2px;
+    transition: background-color 300ms ease;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #c4ff66;
+}
+
+.article__section {
+    background-color: var(--bg-dark);
+    color: #fff;
+    padding: 3em;
+    padding-bottom: 5em;
+    width: 100%;
+}
+
+.article__section em {
+    font-style: normal;
+    font-size: 1.7rem;
+}
+
+.article__section .article {
+    margin: 1em 0;
+}
+
+.accent-inline {
+    color: #99d930;
+    font-weight: 700;
+}
+
+.article__title {
+    font-size: 1.5rem;
+}
+
+.article__subheading {
+    margin-bottom: 1em;
+}
+.article_text {
+    max-width: 65ch;
+}
