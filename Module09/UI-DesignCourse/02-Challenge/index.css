@@ -1,0 +1,89 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #212527;
+  color: #9fb2b9;
+}
+
+.container {
+  display: grid;
+  width: 100%;
+  margin: 2em auto 0;
+}
+.card {
+  background: #337590;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+  border-radius: 1em;
+  margin-bottom: 2em;
+}
+p,
+h3 {
+  margin: 0;
+}
+h3 {
+  margin-left: 1em;
+  margin-top: 0.5em;
+}
+span {
+  width: 5em;
+  height: 5em;
+  background: #75a2b8;
+  border-radius: 50%;
+}
+
+/* 
+
+   Your fixes below:
+   
+   My solution included using the following properties:  
+   width, background, padding, margin,
+   text-transform, font-size, letter-spacing & color
+   
+*/
+
+body {
+  padding: 3rem 2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  background-color: #e9c46a;
+  padding: 2em 1em;
+  max-width: max-content;
+  grid-template-columns: auto auto;
+  border-radius: 3em;
+  background: #2c3031;
+}
+
+.card span {
+  margin: 0 1em;
+  background-color: #e76f51;
+}
+
+p.date {
+  color: #e9c46a;
+}
+
+h3 {
+  font-size: 2rem;
+  margin: 0;
+  color: #e76f51;
+  margin: 0.3em 0;
+}
+
+p.desc {
+  color: #fff;
+  line-height: 1.7;
+  max-width: 65ch;
+}

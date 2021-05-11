@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat";
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./redlight.jpg");
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.container {
+    margin: 1em;
+}
+
+h1 {
+    position: relative;
+    font-size: 4rem;
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    bottom: 0;
+    width: 200%;
+    background-color: red;
+    z-index: -1;
+}
+
+p {
+    position: relative;
+}
+
+p::after{
+    margin: 0;
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -20rem;
+    bottom: -10px;
+    width: 150%;
+    background-color: rgb(77, 77, 77,0.5);
+    z-index: -1;
+}
+
+/*
+
+- White Space
+- Color 
+- Contrast 
+- Scale
+- Alignment
+- Typography
+- Visual Hierarchy
+
+*/

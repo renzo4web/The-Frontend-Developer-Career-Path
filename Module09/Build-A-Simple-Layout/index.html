@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <link rel="stylesheet" href="./layoutSimple/phBackground.css">
+</head>
+
+<body>
+    <div class="container">
+        <p>Today's Article</p>
+        <h1>A Place in <span class="btn-darkLayout">Time</span> and <span>Space</span></h1>
+    </div>
+</body>
+
+<script>
+    const btn = document.querySelector('.btn-darkLayout')
+
+
+    btn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme')
+    })
+</script>
+
+</html>

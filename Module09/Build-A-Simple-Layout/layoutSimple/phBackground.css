@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+
+:root {
+    --font-color: #fff;
+    --bg-color: #fff;
+    --accent-color: #e91e63;
+    --bg-container: #d8e3e7;
+    --bg-image: url("./moon_dark.jpg");
+}
+
+body.dark-theme {
+    --font-color: #fff;
+    --bg-color: #1c1c1c;
+    --accent-color: #ca3f14;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    transition: background-color 500ms;
+}
+
+body {
+    font-family: "Montserrat";
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 50vh;
+    background: var(--bg-image);
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    z-index: -3;
+}
+
+.container {
+    margin-top: 2em;
+    padding: 1em;
+    grid-column: 1 /-1;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    margin-top: 0;
+    margin: 0;
+    font-size: 4rem;
+    color: var(--font-color);
+    border-left: 0.2em solid var(--accent-color);
+    width: 40%;
+    padding-left: 2rem;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    margin-top: 0;
+    margin-right: 2rem;
+    color: var(--font-color);
+}
+
+h1 span {
+    color: var(--accent-color);
+    font-style: italic;
+}
+
+.btn-darkLayout {
+    cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+}
+
+/*
+
+- White Space
+- Color 
+- Contrast 
+- Scale
+- Alignment
+- Typography
+- Visual Hierarchy
+
+*/
