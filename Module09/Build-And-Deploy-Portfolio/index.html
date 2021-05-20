@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <title>Jane Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+
+        <nav class="header__nav">
+            <img class="header__logo" src="./img/devjane.png" alt="">
+
+            <button class="nav__toggle" aria-label="toggle navigation">
+                <span class="nav__hamburger"></span>
+            </button>
+            <ul class="nav__list">
+                <li class="nav__item"> <a class="nav__link" href="#">What i do</a></li>
+                <li class="nav__item"> <a class="nav__link" href="#">Who i am</a></li>
+                <li class="nav__item"> <a class="nav__link" href="#">My Work</a></li>
+            </ul>
+        </nav>
+        <section class="header__hero">
+            <div class="title">
+                <p>Hi, i am</p>
+                <h1>Jane Smith</h1>
+            </div>
+            <p class="header__accent">front-end dev</p>
+            <img class="header__img" src="./img/dev-jane-01.jpg" alt="dev jane">
+        </section>
+
+    </header>
+
+    <section class="profesion">
+
+        <h2>What i do</h2>
+
+        <div class="profesion__main">
+
+            <div class="profesion__content">
+                <p class="profesion__title">Design + Development</p>
+                <p class="profesion__text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti unde reprehenderit officia optio
+                    non,
+                    quae veritatis dolore dolorem cum porro illum. Quia id magnam nisi incidunt sunt esse libero
+                    dolorum?
+                </p>
+            </div>
+
+
+            <div class="profesion__content">
+                <p class="profesion__title">E-Commerce</p>
+                <p class="profesion__text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti unde reprehenderit officia optio
+                    non,
+                    quae veritatis dolore dolorem cum porro illum. Quia id magnam nisi incidunt sunt esse libero
+                    dolorum?
+                </p>
+            </div>
+
+
+            <div class="profesion__content">
+                <p class="profesion__title">Wordpress</p>
+                <p class="profesion__text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti unde reprehenderit officia optio
+                    non,
+                    quae veritatis dolore dolorem cum porro illum. Quia id magnam nisi incidunt sunt esse libero
+                    dolorum?
+                </p>
+            </div>
+
+        </div>
+
+        <button class="btn">see my work</button>
+
+    </section>
+
+    <!-- About me -->
+
+    <section class="about-me">
+        <h2>Who i am</h2>
+        <p class="about-me__accent">Designer & developer based out of NYC</p>
+        <img class="about-me__img" src="./img/dev-jane-02.jpg" alt="jane">
+        <article>
+            <p class="about-me__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, eligendi
+                inventore.
+                Optio ipsa quas
+                voluptatibus quae dolor laboriosam earum commodi non, voluptates in magni voluptas sunt deleniti
+                consectetur
+                sapiente, fugit quis tempora nesciunt, sit delectus! Voluptatem labore laudantium et quaerat explicabo
+                quia
+                similique ducimus iure.</p>
+
+            <p class="about-me__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis dolores
+                quidem
+                blanditiis at quas nihil
+                reiciendis? Mollitia, qui earum quibusdam delectus, dolorum voluptas, voluptatibus recusandae temporibus
+                necessitatibus natus et quo sequi doloribus quisquam illo id.</p>
+        </article>
+
+    </section>
+
+
+    <!-- MY WORK -->
+
+    <section class="mywork">
+        <h2>My Work</h2>
+        <p class="mywork-accent">A selection of my range of work</p>
+        <div class="mywork__grid">
+            <a class="mywork__link" href="#">
+                <img src="./img/portfolio-01.jpg" alt="">
+            </a> <a class="mywork__link" href="#">
+                <img src="./img/portfolio-02.jpg" alt="">
+            </a> <a class="mywork__link" href="#">
+                <img src="./img/portfolio-03.jpg" alt="">
+            </a> <a class="mywork__link" href="#">
+                <img src="./img/portfolio-04.jpg" alt="">
+            </a> <a class="mywork__link" href="#">
+                <img src="./img/portfolio-05.jpg" alt="">
+            </a> <a class="mywork__link" href="#">
+                <img src="./img/portfolio-06.jpg" alt="">
+            </a> <a class="mywork__link" href="#">
+                <img src="./img/portfolio-07.jpg" alt="">
+            </a> <a class="mywork__link" href="#">
+                <img src="./img/portfolio-08.jpg" alt="">
+            </a> <a class="mywork__link" href="#">
+                <img src="./img/portfolio-09.jpg" alt="">
+            </a> <a class="mywork__link" href="#">
+                <img src="./img/portfolio-10.jpg" alt="">
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <a href="mailto:hello@jane.dev" class="footer__link">hello@devjane.com</a>
+        <ul class="footer__icons-wrapper">
+            <li class="social-list"><a class="social-list__link" href="#">
+                <i class="fab fa-codepen"></i>
+            </a></li>
+            <li class="social-list"><a class="social-list__link" href="#">
+                <i class="fab fa-dribbble"></i>
+            </a></li>
+            <li class="social-list"><a class="social-list__link" href="#">
+                <i class="fab fa-twitter"></i>
+            </a></li>
+            <li class="social-list"><a class="social-list__link" href="#">
+                <i class="fab fa-github"></i>
+            </a></li>
+        </ul>
+
+    </footer>
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
