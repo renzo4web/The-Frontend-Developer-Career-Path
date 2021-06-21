@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <title>BlogSpace 🌌</title>
+  </head>
+  <body class="container container-sm">
+    <h1 class="m-0 p-2 bg-warning bg-gradient text-center">BlogSpace</h1>
+    <h4 class="error-alert bg-danger invisible">Error Please try again</h4>
+    <form name='form' id="form" class="container container-sm bg-info p-4">
+      <label class="form-label" for="post-title">Title</label>
+      <input
+        name="title"
+        id="title"
+        type="text"
+        class="form-control"
+        maxlength="20"
+      />
+      <label class="form-label" for="post-title">Body</label>
+      <input name="body" id="body" type="text" class="form-control" />
+      <button type="submit" class="btn btn-success mt-3 form-control">
+        Post
+      </button>
+    </form>
+    <section id="articles" class="list-group mt-5">
+      <article>
+        <h4 class="article-title">Lorem, ipsu iste iure, voluptas nisi fuga</h4>
+        <p class="article-body">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, ad
+          corrupti aliquam eaque architecto sunt voluptates reprehenderit vitae
+          assumenda facilis. Obcaecati ullam ducimus quis eligendi totam fugiat
+          alias sunt doloremque!
+        </p>
+        <hr />
+      </article>
+    </section>
+    <script src="./app.js"></script>
+  </body>
+</html>
