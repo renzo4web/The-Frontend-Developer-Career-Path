@@ -2,7 +2,7 @@ import React from "react";
 
 import Todo from "./Todo";
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, handleDelete, handleEdit }) => {
   const styles = {
     display: "flex",
     flexDirection: "column",
@@ -12,7 +12,11 @@ const TodoList = ({ todos }) => {
   return (
     <div style={styles}>
       {todos.map((todo) => {
-        return <Todo key={todo.id}>{todo.todo}</Todo>;
+        return (
+          <Todo handleEdit={handleEdit} handleDelete={handleDelete} data={todo.id} key={todo.id}>
+            {todo.text}
+          </Todo>
+        );
       })}
     </div>
   );
