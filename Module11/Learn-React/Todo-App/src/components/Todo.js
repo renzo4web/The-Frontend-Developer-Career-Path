@@ -1,6 +1,9 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
+import React, { useState } from "react";
 
-const Todo = ({ children, handleDelete, handleEdit, data }) => {
+const Todo = ({ children, handleCompleted, handleEdit, data, isChecked }) => {
+  const [checked, setChecked] = useState(false);
+
   const labelStyles = {
     backgroundColor: "grey",
     color: "white",
@@ -17,15 +20,19 @@ const Todo = ({ children, handleDelete, handleEdit, data }) => {
   };
 
   return (
-    <div style={labelStyles}>
+    <div style={isChecked ? { ...labelStyles, textDecoration: "line-through" } : { labelStyles }}>
       <div tabIndex={0} role="button" onClick={() => handleEdit(data)}>
         {children}
       </div>
 
       <input
         style={inputStyle}
-        onChange={() => handleDelete(data)}
+        onChange={() => {
+          handleCompleted(data);
+          setChecked(!checked);
+        }}
         type="checkbox"
+        checked={checked}
         id="completed"
       />
     </div>

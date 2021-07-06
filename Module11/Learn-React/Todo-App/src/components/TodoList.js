@@ -2,7 +2,7 @@ import React from "react";
 
 import Todo from "./Todo";
 
-const TodoList = ({ todos, handleDelete, handleEdit }) => {
+const TodoList = ({ todos, handleCompleted, handleEdit }) => {
   const styles = {
     display: "flex",
     flexDirection: "column",
@@ -13,7 +13,14 @@ const TodoList = ({ todos, handleDelete, handleEdit }) => {
     <div style={styles}>
       {todos.map((todo) => {
         return (
-          <Todo handleEdit={handleEdit} handleDelete={handleDelete} data={todo.id} key={todo.id}>
+          <Todo
+            style={todo.completed ? { textDecoration: "line-through" } : ""}
+            handleEdit={handleEdit}
+            handleCompleted={handleCompleted}
+            data={todo.id}
+            isChecked={todo.completed}
+            key={todo.id}
+          >
             {todo.text}
           </Todo>
         );

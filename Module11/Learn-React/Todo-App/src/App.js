@@ -28,13 +28,18 @@ const App = () => {
     console.log(todos);
     localStorage.setItem("todos", JSON.stringify(todos));
 
+    console.log("Todo Viejo", edit);
+
     return () => {
       setEdit({
         id: "",
         text: "",
         createdAt: "",
       });
+
+      console.log("Todo Nuevo", edit);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [todos]);
 
   const handleTodo = (todo) => {
@@ -42,8 +47,15 @@ const App = () => {
     console.log(todos);
   };
 
-  const handleDelete = (deleteTodoId) => {
-    setTodos((prevTodos) => prevTodos.filter(({ id }) => id !== deleteTodoId));
+  const handleCompleted = (id) => {
+    setTodos((prevTodos) => {
+      return prevTodos.map((todo) => {
+        if (todo.id === id) {
+          todo.completed = true;
+        }
+        return todo;
+      });
+    });
   };
 
   const handleEdit = (id) => {
@@ -73,13 +85,16 @@ const App = () => {
     <div style={styles}>
       <h1>Todo App</h1>
       <AddTodo onSubmit={handleTodo} />
-      <TodoList handleEdit={handleEdit} handleDelete={handleDelete} todos={todos} />
+      <TodoList handleEdit={handleEdit} handleCompleted={handleCompleted} todos={todos} />
 
       {modal ? (
         <Modal>
           <div>
             <h2>Edit Todo</h2>
-            <textarea onChange={(e) => setEdit({ ...edit, text: e.target.value })}></textarea>
+            <textarea
+              value={edit.text}
+              onChange={(e) => setEdit({ ...edit, text: e.target.value })}
+            />
             <div className="buttons">
               <button onClick={editTodo}>Edit</button>
               <button onClick={toggleModal}>Cancel</button>

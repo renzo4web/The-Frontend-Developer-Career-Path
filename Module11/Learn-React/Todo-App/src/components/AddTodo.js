@@ -16,8 +16,11 @@ const AddTodo = ({ onSubmit }) => {
       id: getId(),
       text: input.trim(),
       createdAt: new Date(),
+      completed: false,
     };
     onSubmit(todo);
+
+    event.target.reset();
   };
 
   return (
